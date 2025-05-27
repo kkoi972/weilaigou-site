@@ -3,106 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>未来购｜全球供应链返利平台</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>未来购｜官方跨境商城</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Microsoft Yahei', sans-serif;
+      background: linear-gradient(to bottom, #0e0e0e, #1c1c1c);
+      color: #f0f0f0;
+    }
+    header {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+    }
+    .logo {
+      font-size: 28px;
+      color: gold;
+      font-weight: bold;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      color: gold;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 30px;
+      background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+    }
+    .hero h1 {
+      font-size: 48px;
+      color: gold;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      color: #aaa;
+    }
+    .btn {
+      margin-top: 30px;
+      background-color: gold;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #ffd700;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: gold;
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .features, .faq {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .feature-item, .faq-item {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+    @media(max-width: 768px) {
+      .features, .faq {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
+  <header>
+    <div class="logo">未来购</div>
+    <nav>
+      <a href="#features">产品优势</a>
+      <a href="#faq">常见问题</a>
+      <a href="https://zyyy.zhaodezhu.cn/" target="_blank">立即下载</a>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="bg-white py-12 text-center">
-    <h1 class="text-4xl font-bold mb-4">全球优选供应链，赋能跨境新零售</h1>
-    <p class="text-lg mb-6">智能链接全球商品与用户，实现收益共赢新生态</p>
-    <div class="space-x-4">
-      <button class="bg-blue-600 text-white px-6 py-2 rounded-full">立即注册</button>
-      <button class="bg-gray-200 px-6 py-2 rounded-full">平台介绍</button>
-    </div>
-  </section>
+  <div class="hero">
+    <h1>跨境消费的未来，从未来购开始</h1>
+    <p>全球供应链直采，AI智能返利，轻松创业新模式。</p>
+    <a href="https://zyyy.zhaodezhu.cn/" target="_blank"><button class="btn">立即下载 APP</button></a>
+  </div>
 
-  <!-- 三大核心优势 -->
-  <section class="py-12 bg-gray-100">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-      <div>
-        <h2 class="text-xl font-bold mb-2">全球供应链资源整合</h2>
-        <p>直采Amazon、Alibaba、京东等，1000+优质工厂直供。</p>
+  <section id="features">
+    <h2>产品优势</h2>
+    <div class="features">
+      <div class="feature-item">
+        <h3>全球供应链整合</h3>
+        <p>对接Amazon、阿里、京东等头部平台，确保货源品质与价格优势。</p>
       </div>
-      <div>
-        <h2 class="text-xl font-bold mb-2">日返收益可视可提</h2>
-        <p>AI系统管理，2–5%日收益，资金灵活调配。</p>
+      <div class="feature-item">
+        <h3>每日返利机制</h3>
+        <p>灵活理财方式，投资即享每日收益，轻松实现资产增值。</p>
       </div>
-      <div>
-        <h2 class="text-xl font-bold mb-2">社交裂变激励机制</h2>
-        <p>邀请好友得返利，打造多层收益网络。</p>
+      <div class="feature-item">
+        <h3>零门槛创业</h3>
+        <p>一部手机即可开启跨境电商事业，无需囤货，无需发货。</p>
       </div>
-    </div>
-  </section>
-
-  <!-- 产品介绍 -->
-  <section class="py-12 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">产品计划</h2>
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="bg-gray-50 p-6 rounded-lg shadow">
-          <h3 class="font-bold text-xl mb-2">52天计划</h3>
-          <p>日收益：0.77%<br>起投：750 USD<br>支持提现</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow">
-          <h3 class="font-bold text-xl mb-2">80天成长计划</h3>
-          <p>日收益：1.16%<br>起投：1660 USD<br>推荐指数：高</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow">
-          <h3 class="font-bold text-xl mb-2">年化收益计划</h3>
-          <p>年收益：200%–500%<br>起投：2000–9300 USD<br>支持复投加仓</p>
-        </div>
+      <div class="feature-item">
+        <h3>AI智能助手</h3>
+        <p>全程智能托管与引流系统，助你自动推广、自动获客。</p>
       </div>
     </div>
   </section>
 
-  <!-- 加入流程 -->
-  <section class="py-12 bg-gray-100">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">加入流程</h2>
-      <ol class="text-left max-w-xl mx-auto list-decimal list-inside space-y-2">
-        <li>注册账号</li>
-        <li>选择产品下单</li>
-        <li>每日查看收益</li>
-        <li>邀请好友组建团队</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-12 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">常见问题</h2>
-      <div class="space-y-4">
-        <div>
-          <h4 class="font-semibold">平台怎么赚钱？</h4>
-          <p>通过真实供应链差价与AI调配盈利，不依赖风险金融产品。</p>
-        </div>
-        <div>
-          <h4 class="font-semibold">收益是否可提现？</h4>
-          <p>每日收益到账，本金周期结束后可提。</p>
-        </div>
-        <div>
-          <h4 class="font-semibold">不拉人能赚钱吗？</h4>
-          <p>可以。自购即返，拉人仅为额外激励。</p>
-        </div>
-        <div>
-          <h4 class="font-semibold">合法吗？</h4>
-          <p>本平台为合法跨境电商+供应链交易模型，无ICO、无币发行。</p>
-        </div>
+  <section id="faq">
+    <h2>常见问题</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h4>未来购是什么？</h4>
+        <p>未来购是一个整合全球供应链、结合AI返利系统的跨境电商平台，帮助用户低门槛获得被动收入。</p>
+      </div>
+      <div class="faq-item">
+        <h4>APP怎么下载？</h4>
+        <p>点击页面上方“立即下载”，即可跳转到官方APP页面进行下载。</p>
+      </div>
+      <div class="faq-item">
+        <h4>新手如何加入？</h4>
+        <p>注册账号后，只需选择产品组合并支付，即可开始收益，系统将自动返利。</p>
+      </div>
+      <div class="faq-item">
+        <h4>是否安全可靠？</h4>
+        <p>平台已与多家全球品牌达成合作，采用分布式数据和加密支付保障用户数据与资产安全。</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-12 bg-blue-600 text-white text-center">
-    <h2 class="text-2xl font-bold mb-4">加入未来购，共享全球供应链红利！</h2>
-    <button class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold">立即注册</button>
-  </section>
-
-  <footer class="py-6 bg-gray-800 text-white text-center text-sm">
-    未来购 © 2025 ｜ 全球智能供应链平台
+  <footer>
+    © 2025 未来购 weilaigou.com ｜版权所有
   </footer>
 </body>
 </html>
+
