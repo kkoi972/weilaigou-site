@@ -1,164 +1,214 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>未来购｜官方跨境商城</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>未来购 - 全球智能供应链平台</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Microsoft Yahei', sans-serif;
-      background: linear-gradient(to bottom, #0e0e0e, #1c1c1c);
-      color: #f0f0f0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
     }
+
+    body {
+      background: linear-gradient(135deg, #000000, #1e1e1e);
+      color: #fff;
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #000;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid gold;
     }
-    .logo {
-      font-size: 28px;
+
+    header h1 {
       color: gold;
-      font-weight: bold;
+      font-size: 2.5rem;
     }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: #1a1a1a;
+      padding: 10px;
+    }
+
     nav a {
       color: #ccc;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 16px;
+      font-weight: bold;
     }
+
     nav a:hover {
       color: gold;
     }
+
     .hero {
       text-align: center;
-      padding: 100px 30px;
-      background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+      padding: 100px 20px;
+      background: url('https://images.unsplash.com/photo-1677442139156-7b1ff3fdb3b0') no-repeat center center/cover;
+      position: relative;
     }
-    .hero h1 {
-      font-size: 48px;
+
+    .hero h2 {
+      font-size: 3rem;
       color: gold;
-      margin-bottom: 20px;
+      z-index: 1;
     }
+
     .hero p {
-      font-size: 20px;
-      color: #aaa;
+      font-size: 1.2rem;
+      margin-top: 20px;
     }
-    .btn {
+
+    .hero button {
       margin-top: 30px;
-      background-color: gold;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background: gold;
       color: #000;
-      padding: 15px 30px;
       border: none;
-      border-radius: 8px;
-      font-size: 18px;
       cursor: pointer;
       transition: 0.3s;
     }
-    .btn:hover {
-      background-color: #ffd700;
+
+    .hero button:hover {
+      background: #f2c700;
     }
-    section {
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 60px 20px;
+      background: #000;
+      text-align: center;
+    }
+
+    .stats div {
+      font-size: 2rem;
+      color: gold;
+    }
+
+    .section {
       padding: 80px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    h2 {
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
       color: gold;
-      font-size: 32px;
+    }
+
+    .section p {
+      margin-bottom: 20px;
+    }
+
+    .section ul {
+      list-style: disc;
+      padding-left: 40px;
+    }
+
+    .video {
       text-align: center;
-      margin-bottom: 40px;
+      margin: 40px 0;
     }
-    .features, .faq {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+
+    .video iframe {
+      width: 90%;
+      max-width: 700px;
+      height: 400px;
+      border: none;
     }
-    .feature-item, .faq-item {
-      background-color: #1c1c1c;
-      padding: 20px;
-      border: 1px solid #333;
-      border-radius: 12px;
-    }
+
     footer {
+      background: #111;
+      color: #aaa;
+      padding: 20px;
       text-align: center;
-      padding: 40px;
-      font-size: 14px;
-      color: #555;
-    }
-    @media(max-width: 768px) {
-      .features, .faq {
-        grid-template-columns: 1fr;
-      }
+      border-top: 1px solid #444;
     }
   </style>
+  <script>
+    // 动态数字增长模拟
+    let count = 8962;
+    function animateCounter() {
+      const counter = document.getElementById('joinCount');
+      setInterval(() => {
+        count += Math.floor(Math.random() * 5 + 1);
+        counter.textContent = count.toLocaleString();
+      }, 3000);
+    }
+    window.onload = animateCounter;
+  </script>
 </head>
+
 <body>
   <header>
-    <div class="logo">未来购</div>
-    <nav>
-      <a href="#features">产品优势</a>
-      <a href="#faq">常见问题</a>
-      <a href="https://zyyy.zhaodezhu.cn/" target="_blank">立即下载</a>
-    </nav>
+    <h1>未来购</h1>
   </header>
+  <nav>
+    <a href="#advantages">产品优势</a>
+    <a href="#join">加入我们</a>
+    <a href="#faq">常见问题</a>
+  </nav>
 
-  <div class="hero">
-    <h1>跨境消费的未来，从未来购开始</h1>
-    <p>全球供应链直采，AI智能返利，轻松创业新模式。</p>
-    <a href="https://zyyy.zhaodezhu.cn/" target="_blank"><button class="btn">立即下载 APP</button></a>
-  </div>
-
-  <section id="features">
-    <h2>产品优势</h2>
-    <div class="features">
-      <div class="feature-item">
-        <h3>全球供应链整合</h3>
-        <p>对接Amazon、阿里、京东等头部平台，确保货源品质与价格优势。</p>
-      </div>
-      <div class="feature-item">
-        <h3>每日返利机制</h3>
-        <p>灵活理财方式，投资即享每日收益，轻松实现资产增值。</p>
-      </div>
-      <div class="feature-item">
-        <h3>零门槛创业</h3>
-        <p>一部手机即可开启跨境电商事业，无需囤货，无需发货。</p>
-      </div>
-      <div class="feature-item">
-        <h3>AI智能助手</h3>
-        <p>全程智能托管与引流系统，助你自动推广、自动获客。</p>
-      </div>
-    </div>
+  <section class="hero">
+    <h2>智能供应链·全球赢利模式</h2>
+    <p>每天都有 <span id="joinCount">8962</span> 人加入未来购</p>
+    <button onclick="window.location.href='https://zyyy.zhaodezhu.cn/'">立即下载</button>
   </section>
 
-  <section id="faq">
-    <h2>常见问题</h2>
-    <div class="faq">
-      <div class="faq-item">
-        <h4>未来购是什么？</h4>
-        <p>未来购是一个整合全球供应链、结合AI返利系统的跨境电商平台，帮助用户低门槛获得被动收入。</p>
-      </div>
-      <div class="faq-item">
-        <h4>APP怎么下载？</h4>
-        <p>点击页面上方“立即下载”，即可跳转到官方APP页面进行下载。</p>
-      </div>
-      <div class="faq-item">
-        <h4>新手如何加入？</h4>
-        <p>注册账号后，只需选择产品组合并支付，即可开始收益，系统将自动返利。</p>
-      </div>
-      <div class="faq-item">
-        <h4>是否安全可靠？</h4>
-        <p>平台已与多家全球品牌达成合作，采用分布式数据和加密支付保障用户数据与资产安全。</p>
-      </div>
-    </div>
+  <section id="video" class="video">
+    <h3>AI 数字人 · 智能讲解</h3>
+    <iframe src="https://www.youtube.com/embed/Z3kJYzX3CUQ" allowfullscreen></iframe>
+  </section>
+
+  <section id="advantages" class="section">
+    <h3>产品优势</h3>
+    <ul>
+      <li>✅ 全球1000+优质供应链接入，坐享每日返利</li>
+      <li>✅ 零门槛操作，智能托管，资金灵活流转</li>
+      <li>✅ 社交+区块链双驱动，AI精准匹配引流</li>
+      <li>✅ 数字人矩阵助力推广，社交媒体自动引爆</li>
+    </ul>
+  </section>
+
+  <section id="join" class="section">
+    <h3>加入我们 · 改变人生</h3>
+    <p>我们不是普通项目，我们是一场真正的趋势革命。</p>
+    <p>用户通过轻松参与，就能享受每日收益，组建团队更可实现倍增收益。未来购已帮助数千名普通人实现财富自由。现在加入，是你人生转折的起点。</p>
+  </section>
+
+  <section id="faq" class="section">
+    <h3>常见问题 FAQ</h3>
+    <ul>
+      <li><strong>Q：未来购是做什么的？</strong><br />A：一个智能跨境供应链返利平台，用户通过购买计划每日获取收益。</li>
+      <li><strong>Q：如何开始？</strong><br />A：点击下载 App，注册账号，选择计划即可开始。</li>
+      <li><strong>Q：是否安全？</strong><br />A：平台对接实体供应链及全球物流，保障交易闭环。</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3>平台故事</h3>
+    <p>未来购成立于2023年，由一群跨境电商、供应链与区块链领域的技术极客与前阿里团队共同发起。</p>
+    <p>我们看到无数人错失趋势，也看到普通人被割韭菜，因此我们希望打造一个“智能时代的公平机会平台”。</p>
+    <p>未来购，不只是项目，而是一场关于信任、技术与命运的博弈。</p>
   </section>
 
   <footer>
-    © 2025 未来购 weilaigou.com ｜版权所有
+    版权所有 © 2025 未来购 | 智能时代 财富共赢
   </footer>
 </body>
+
 </html>
 
